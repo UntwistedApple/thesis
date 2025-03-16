@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=ADS114S08BIPBS
+PartCategory=Integrated Circuit
+PackageCategory=Quad Flat Packages
+PinCount=32
+Version=1.1
+Released=2018-11-22 09:50:10
+Downloaded=2025-03-11 15:17:02
+3D=Y

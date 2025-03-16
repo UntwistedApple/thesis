@@ -1,0 +1,169 @@
+%% This is file `DEMO-TUDaThesis.tex' version 3.35 (2023-12-11),
+%% it is part of
+%% TUDa-CI -- Corporate Design for TU Darmstadt
+%% ----------------------------------------------------------------------------
+%%
+%%  Copyright (C) 2018--2023 by Marei Peischl <marei@peitex.de>
+%%
+%% ============================================================================
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%% http://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2008/05/04 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The Current Maintainers of this work are
+%%   Marei Peischl <tuda-ci@peitex.de>
+%%   Markus Lazanowski <latex@ce.tu-darmstadt.de>
+%%
+%% The development respository can be found at
+%% https://github.com/tudace/tuda_latex_templates
+%% Please use the issue tracker for feedback!
+%%
+%% If you need a compiled version of this document, have a look at
+%% http://mirror.ctan.org/macros/latex/contrib/tuda-ci/doc
+%% or at the documentation directory of this package (if installed)
+%% <path to your LaTeX distribution>/doc/latex/tuda-ci
+%% ============================================================================
+%%
+% !TeX program = lualatex
+%%
+
+\documentclass[
+	ngerman,
+	ruledheaders=section,%Ebene bis zu der die Überschriften mit Linien abgetrennt werden, vgl. DEMO-TUDaPub
+	class=report,% Basisdokumentenklasse. Wählt die Korrespondierende KOMA-Script Klasse
+	thesis={type=bachelor},% Dokumententyp Thesis, für Dissertationen siehe die Demo-Datei DEMO-TUDaPhd
+	accentcolor=9c,% Auswahl der Akzentfarbe
+	custommargins=true,% Ränder werden mithilfe von typearea automatisch berechnet
+	marginpar=false,% Kopfzeile und Fußzeile erstrecken sich nicht über die Randnotizspalte
+	%BCOR=5mm,%Bindekorrektur, falls notwendig
+	parskip=half-,%Absatzkennzeichnung durch Abstand vgl. KOMA-Script
+	fontsize=11pt,%Basisschriftgröße laut Corporate Design ist mit 9pt häufig zu klein
+%	logofile=example-image, %Falls die Logo Dateien nicht vorliegen
+]{tudapub}
+
+
+%%%%%%%%%%%%%%%%%%%
+%Sprachanpassung & Verbesserte Trennregeln
+%%%%%%%%%%%%%%%%%%%
+\usepackage[ngerman, main=english]{babel}
+\usepackage[autostyle]{csquotes}% Anführungszeichen vereinfacht
+
+% Falls mit pdflatex kompiliert wird, wird microtype automatisch geladen, in diesem Fall muss diese Zeile entfernt werden, und falls weiter Optionen hinzugefügt werden sollen, muss dies über
+% \PassOptionsToPackage{Optionen}{microtype}
+% vor \documentclass hinzugefügt werden.
+%\usepackage{microtype}
+
+%%%%%%%%%%%%%%%%%%%
+%Literaturverzeichnis
+%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=biber]{biblatex}   % Literaturverzeichnis
+\bibliography{DEMO-TUDaBibliography}
+%\bibliography{zotero.bib}
+
+
+%%%%%%%%%%%%%%%%%%%
+%Paketvorschläge Tabellen
+%%%%%%%%%%%%%%%%%%%
+%\usepackage{array}     % Basispaket für Tabellenkonfiguration, wird von den folgenden automatisch geladen
+\usepackage{tabularx}   % Tabellen, die sich automatisch der Breite anpassen
+%\usepackage{longtable} % Mehrseitige Tabellen
+%\usepackage{xltabular} % Mehrseitige Tabellen mit anpassbarer Breite
+\usepackage{booktabs}   % Verbesserte Möglichkeiten für Tabellenlayout über horizontale Linien
+
+%%%%%%%%%%%%%%%%%%%
+%Paketvorschläge Mathematik
+%%%%%%%%%%%%%%%%%%%
+%\usepackage{mathtools} % erweiterte Fassung von amsmath
+%\usepackage{amssymb}   % erweiterter Zeichensatz
+%\usepackage{siunitx}   % Einheiten
+
+%Formatierungen für Beispiele in diesem Dokument. Im Allgemeinen nicht notwendig!
+\let\file\texttt
+\let\code\texttt
+\let\tbs\textbackslash
+\let\pck\textsf
+\let\cls\textsf
+
+\usepackage{pifont}% Zapf-Dingbats Symbole
+\newcommand*{\FeatureTrue}{\ding{52}}
+\newcommand*{\FeatureFalse}{\ding{56}}
+
+\begin{document}
+
+\Metadata{
+	title=Smart fabrics that think, sense and act.,
+	author=Philipp Macher
+}
+
+\title{Smart fabrics that think, sense and act.}
+\subtitle{A scalable, modular approach to in-place printed strain sensors}
+\author[P. Macher]{Philipp Macher}%optionales Argument ist die Signatur,
+%\birthplace{Geburtsort}%Geburtsort, bei Dissertationen zwingend notwendig
+\studentID{2256373}
+\reviewer{Gutachter 1 \and Gutachter 2}%Gutachter
+
+%Diese Felder werden untereinander auf der Titelseite platziert.
+%\department ist eine notwendige Angabe, siehe auch dem Abschnitt `Abweichung von den Vorgaben für die Titelseite'
+\department{inf} % Das Kürzel wird automatisch ersetzt und als Studienfach gewählt, siehe Liste der Kürzel im Dokument.
+%\institute{Institut?}
+\group{Resilent Cyberphysical Systems}
+
+\submissiondate{\today}
+\examdate{\today}
+
+% Hinweis zur Lizenz:
+% TUDa-CI verwendet momentan die Lizenz CC BY-NC-ND 2.0 DE als Voreinstellung.
+% Die TU Darmstadt hat jedoch die Empfehlung von dieser auf die liberalere
+% CC BY 4.0 geändert. Diese erlaubt eine Verwendung bearbeiteter Versionen und
+% die kommerzielle Nutzung.
+% TUDa-CI wird im nächsten größeren Release ebenfalls diese Anpassung vornehmen.
+% Aus diesem Grund wird empfohlen die Lizenz manuell auszuwählen.
+%\tuprints{urn=XXXXX,printid=XXXX,year=2022,license=cc-by-4.0}
+% To see further information on the license option in English, remove the license= key and pay attention to the warning & help message.
+
+% \dedication{Für alle, die \TeX{} nutzen.}
+
+\maketitle
+
+% Das Affidavit wurde auf Wunsch des Dezernat II per default deaktiviert.
+% Der rechtlich bindende Text findet sich nach Aukunft des Dezernats unter https://www.tu-darmstadt.de/studieren/studierende_tu/studienorganisation_und_tucan/hilfe_und_faq/artikel_details_de_en_37824.de.jsp
+% Es soll die docx Datei verwendet, ausgedruckt, unterschrieben, eingescannt und dann eingebunden werden.
+% Die einfachste Möglichkeit bitet hierüfr das pdfpages Paket.
+%
+% Aus Kompatibilitätsgründen für die anderen Templates ist die Funktion weiterhin verfügbar.
+%\affidavit
+% Es gibt mit Version 3.20 die Möglichkeit ein Bild als Signatur einzubinden.
+% TUDa-CI kann nicht garantieren, dass dies zulässig ist oder eine eigenhändige Unterschrift ersetzt.
+% Dies ist durch Studierende vor der Verwendung abzuklären.
+% Selbiges gilt für den voreingestellten Text der Erklärung. Es ist zwingend notwendig, dass Studierende dies vor der Abgabe überprüfen.
+% Die Jeweils aktuelle Fassung findest sich als docx-Datei unter https://www.tu-darmstadt.de/studieren/studierende_tu/studienorganisation_und_tucan/hilfe_und_faq/artikel_details_de_en_37824.de.jsp
+% Die Verwendung funktioniert so:
+%\affidavit[signature-image={\includegraphics[width=\width,height=1cm]{example-image}}, <hier können andere Optionen zusätzlich stehen>]
+
+\tableofcontents
+
+\chapter{Introduction}
+Flexible pressure sensing was used in a pressure sensing chair before\cite{tudapub}
+
+\chapter{Methodology}
+b
+
+\chapter{Results and analysis}
+c
+
+\chapter{Discussion}
+d
+
+\chapter{Conclusion}
+e
+
+
+\printbibliography
+
+\end{document}

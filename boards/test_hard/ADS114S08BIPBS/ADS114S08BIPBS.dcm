@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADS114S08BIPBS
+D 16-Bit, 4kSPS, 12-Ch Delta-Sigma ADC With PGA and Voltage Reference for Low-Cost Applications
+K
+F http://www.ti.com/lit/ds/symlink/ads114s06b.pdf
+$ENDCMP
+#
+#End Doc Library

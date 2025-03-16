@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "customs")(type "KiCad")(uri "${KIPRJMOD}/customs.kicad_sym")(options "")(descr ""))
+  (lib (name "ADS114S08BIPBS")(type "KiCad")(uri "${KIPRJMOD}/ADS114S08BIPBS/ADS114S08BIPBS.kicad_sym")(options "")(descr ""))
+)

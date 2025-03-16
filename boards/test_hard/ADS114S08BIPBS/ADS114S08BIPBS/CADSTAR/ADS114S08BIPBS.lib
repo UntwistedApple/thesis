@@ -1,0 +1,16 @@
+.ADS114S08BIPBS :1 ;16-Bit, 4kSPS, 12-Ch Delta-Sigma ADC With PGA and Voltage Reference for Low-Cost Applications
+QFP50P700X700X120-32N
+*STM IC
+*NGS
+*PLB 1="AINCOM" 2="AIN5" 3="AIN4" 4="AIN3" 5="AIN2" 6="AIN1" 7="AIN0" 8="START/SYNC" 9="'CS'" 10="DIN" 11="SCLK" 12="DOUT/'DRDY'" 13="'DRDY'" 14="DGND" 15="IOVDD" 16="DVDD" 17="CLK" 18="'RESET'" 19="GPIO3/AIN11" 20="GPIO2/AIN10" 21="GPIO1/AIN9" 22="GPIO0/AIN8" 23="REFOUT" 24="REFCOM" 25="NC" 26="AVDD" 27="AVSS_1" 28="AVSS_2" 29="REFN0" 30="REFP0" 31="REFN1/AIN7" 32="REFP1/AIN6"
+*MXP 32
+*DFN ADS114S08BIPBS
+~!Mouser Part Number (595-ADS114S08BIPBS)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/ADS114S08BIPBS?qs=BZBei1rCqCDQBH%2FvFX3yrQ%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (ADS114S08BIPBS)
+~!Link Datasheet (http://www.ti.com/lit/ds/symlink/ads114s06b.pdf)
+~!Height (1.2mm)
+~!3D_Model (ADS114S08BIPBS)
+ADS114S08BIPBS
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 24.1!U 23.1!U 22.1!U 21.1!U 20.1!U 19.1!U 18.1!U 17.1!U 32.1!U 31.1!U 30.1!U 29.1!U 28.1!U 27.1!U 26.1!U 25.1!U 
