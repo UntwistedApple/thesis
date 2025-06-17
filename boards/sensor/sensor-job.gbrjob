@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "9.0.0-9.0.0-2~ubuntu22.04.1"
     },
-    "CreationDate": "2025-04-11T17:55:25+02:00"
+    "CreationDate": "2025-05-22T21:14:13+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -27,18 +27,13 @@
       "PadToPad": 0.2,
       "PadToTrack": 0.2,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 0.15
+      "MinLineWidth": 0.5
     }
   ],
   "FilesAttributes": [
     {
       "Path": "sensor-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "sensor-B_Cu.gbr",
-      "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     }
   ],
