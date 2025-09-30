@@ -7,6 +7,7 @@ import time
 
 # Konfiguration
 SERIAL_PORT = '/dev/ttyUSB0'
+SERIAL_PORT_2 = '/dev/ttyUSB1'
 BAUD_RATE = 115200
 MAX_DATA_POINTS = 2400
 
@@ -35,9 +36,14 @@ def read_serial_data():
         ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
         print(f"Erfolgreich verbunden mit {SERIAL_PORT}")
     except serial.SerialException as e:
-        print(f"Fehler beim Verbinden mit {SERIAL_PORT}: {e}")
-        is_running = False
-        return
+        try:
+            print(f"{SERIAL_PORT} ist nicht erreichbar, versuche {SERIAL_PORT_2}")
+            ser = serial.Serial(SERIAL_PORT_2, BAUD_RATE, timeout=1)
+            print(f"Erfolgreich verbunden mit {SERIAL_PORT_2}")
+        except serial.SerialException as e2:
+            print(f"\nFehler beim Verbinden mit {SERIAL_PORT} und {SERIAL_PORT_2}:\n{e}\nund\n{e2}")
+            is_running = False
+            return
 
     while is_running:
         if ser and ser.in_waiting > 0:

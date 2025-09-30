@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def visualize_csv_data(file_name='filtered.csv'):
+def visualize_csv_data(file_name='stretch_test.csv'):
     """
     Visualisiert die in einer CSV-Datei gespeicherten seriellen Daten.
 
